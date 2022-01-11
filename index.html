@@ -9,18 +9,21 @@
 
 <script type="text/javascript" src="https://nam.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-dtzt95/b/6/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?jsI18nTransformer=migrated&locale=en-US&collectorId=2e4c5c4a"></script>
 
-    <script type="text/javascript">window.ATL_JQ_PAGE_PROPS =  {
-	"triggerFunction": function(showCollectorDialog) {
-		//Requires that jQuery is available! 
-		jQuery("#myCustomTrigger").click(function(e) {
+    <script type="text/javascript">window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+
+	// ==== custom trigger function ====
+	triggerFunction : function( showCollectorDialog ) {
+		$('#myCustomTrigger').on( 'click', function(e) {
 			e.preventDefault();
 			showCollectorDialog();
-		});
-
+		}); 
+	},
 	// ==== we add the code below to set the field values ====
 	fieldValues: {
  		summary : 'Feedback for new website designs',
 		description : 'The font doesn\'t quite look right',
  		priority : '2'
-	}				
-	}};</script>
+	}					
+});</script>
+
+
